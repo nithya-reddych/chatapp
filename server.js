@@ -12,8 +12,8 @@ const upload = multer({ dest: 'uploads/' });
 const authRoutes = require('./auth');
 
 const app = express();
-// const OPEN_API_KEY = 'comp150-cdr-2025s-ShkqPMZqsmF3InJvl1yjoCuM6hM0L5n1DAe1wyYu';
-const OPEN_API_KEY = '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';
+
+const OPEN_API_KEY = 'API_KEY_HERE';
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
