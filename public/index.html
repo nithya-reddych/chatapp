@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Spicy+Rice&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="signin-section">
+        <div class="signin-container">
+            <h1>Welcome to Chat App</h1>
+            <p>Enter your Tufts ID and Password to get started</p>
+            <input type="text" id="tuftsId" placeholder="Enter Tufts ID">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button id="signinBtn">Sign In</button>
+            <p>Don't have an account? <button id="showRegisterBtn" class="link-btn">Register</button></p>
+            <p>Or <button id="guestBtn" class="link-btn">Continue as a Guest</button></p>
+        </div>
+    </div>
+
+    <div id="register-section" style="display: none;">
+        <div class="register-container">
+            <h1>Create an Account</h1>
+            <p>Enter your details to register</p>
+            <input type="text" id="registerTuftsId" placeholder="Enter Tufts ID">
+            <input type="password" id="registerPassword" placeholder="Enter Password">
+            <div id="password-requirements">
+                <ul>
+                    <li id="length" class="invalid">At least 7 characters</li>
+                    <li id="uppercase" class="invalid">At least one uppercase letter</li>
+                    <li id="lowercase" class="invalid">At least one lowercase letter</li>
+                    <li id="number" class="invalid">At least one number</li>
+                    <li id="symbol" class="invalid">At least one symbol (e.g., !@#$%^&*)</li>
+                </ul>
+            </div>
+            <button id="registerBtn" disabled>Register</button>
+            <p>Already have an account? <button id="showSigninBtn" class="link-btn">Sign In</button></p>
+        </div>
+    </div>
+
+    <div id="chat-section" style="display: none;">
+        <div class="sidebar">
+            <button id="newChatBtn">+ New Chat</button>
+            <h2>Your Chats</h2>
+            <div id="chat-list"></div>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+        <div class="chat-main">
+            <div class="chat-header">
+                <h2 id="chat-title">Select a chat to start</h2>
+                <div id="userIdDisplay" class="user-id-display"></div>
+            </div>
+            <div id="chat-display" class="chat-display">
+            </div>
+            <!-- <div id="pdf-upload-section">
+                <input type="file" id="pdfFileInput" accept=".pdf" />
+                <button id="uploadPdfBtn">Upload PDF</button>
+            </div> -->
+
+            <div id="pdf-summary-section" style="display: none;">
+                <h2>PDF Summary</h2>
+                <pre id="pdfSummary"></pre>
+            </div>
+
+            <div class="chat-input-container">
+                <input type="text" id="messageInput" placeholder="Type a message">
+                <input type="file" id="pdfFileInput" accept=".pdf" />
+                <button id="uploadPdfBtn">Upload PDF</button>
+                <button id="sendMessageBtn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
